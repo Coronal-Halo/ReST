@@ -8,6 +8,11 @@ import tqdm
 from tqdm import trange
 import argparse
 
+import warnings
+
+# Suppress the FutureWarning for the append method
+warnings.filterwarnings("ignore", category=FutureWarning, message="The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.")
+
 DATASET_NAME = ''
 
 class BasePreprocess:
